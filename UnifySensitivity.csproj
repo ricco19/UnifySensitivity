@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{573E7712-4BFD-441B-B871-58F59164FBEA}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>unify_sensitivity</RootNamespace>
-    <AssemblyName>unify_sensitivity</AssemblyName>
+    <RootNamespace>UnifySensitivity</RootNamespace>
+    <AssemblyName>UnifySensitivity</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -82,6 +82,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

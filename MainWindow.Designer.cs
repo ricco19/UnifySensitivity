@@ -54,11 +54,11 @@
 			this.NumBoxDePerIn = new System.Windows.Forms.NumericUpDown();
 			this.statusStrip = new System.Windows.Forms.StatusStrip();
 			this.statusText = new System.Windows.Forms.ToolStripStatusLabel();
+			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.groupBox5 = new System.Windows.Forms.GroupBox();
 			this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
 			this.label11 = new System.Windows.Forms.Label();
 			this.NumBoxDPI = new System.Windows.Forms.NumericUpDown();
-			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.groupBox2.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.NumBoxSourceYaw)).BeginInit();
@@ -640,6 +640,11 @@
 			this.statusText.Size = new System.Drawing.Size(123, 17);
 			this.statusText.Text = "Sensitivity PagChomp";
 			// 
+			// toolStripStatusLabel1
+			// 
+			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+			this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
+			// 
 			// groupBox5
 			// 
 			this.groupBox5.Controls.Add(this.tableLayoutPanel5);
@@ -709,11 +714,6 @@
             0,
             0});
 			this.NumBoxDPI.ValueChanged += new System.EventHandler(this.NumBoxDPI_ValueChanged);
-			// 
-			// toolStripStatusLabel1
-			// 
-			this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-			this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
 			// 
 			// MainWindow
 			// 
