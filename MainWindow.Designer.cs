@@ -37,11 +37,11 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.NumBoxPUBGConverted = new System.Windows.Forms.NumericUpDown();
+            this.NumBoxPubgConv = new System.Windows.Forms.NumericUpDown();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.NumBoxPUBGSense = new System.Windows.Forms.NumericUpDown();
-            this.NumBoxPUBGFOV = new System.Windows.Forms.NumericUpDown();
+            this.NumBoxPubgSense = new System.Windows.Forms.NumericUpDown();
+            this.NumBoxPubgFov = new System.Windows.Forms.NumericUpDown();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.label10 = new System.Windows.Forms.Label();
@@ -68,9 +68,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.NumBoxOWSense)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGConverted)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGSense)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGFOV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgConv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgSense)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgFov)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumBoxCmPer360)).BeginInit();
@@ -258,10 +258,10 @@
             this.NumBoxOWSense.TabIndex = 2;
             this.NumBoxOWSense.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.NumBoxOWSense.Value = new decimal(new int[] {
-            1,
+            50,
             0,
             0,
-            262144});
+            65536});
             this.NumBoxOWSense.ValueChanged += new System.EventHandler(this.NumBoxOWSense_ValueChanged);
             // 
             // groupBox3
@@ -281,11 +281,11 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel3.Controls.Add(this.label6, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.NumBoxPUBGConverted, 1, 1);
+            this.tableLayoutPanel3.Controls.Add(this.NumBoxPubgConv, 1, 1);
             this.tableLayoutPanel3.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.NumBoxPUBGSense, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.NumBoxPUBGFOV, 1, 2);
+            this.tableLayoutPanel3.Controls.Add(this.NumBoxPubgSense, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.NumBoxPubgFov, 1, 2);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 19);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -308,31 +308,31 @@
             this.label6.Text = "FOV (TPP=80)";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // NumBoxPUBGConverted
+            // NumBoxPubgConv
             // 
-            this.NumBoxPUBGConverted.DecimalPlaces = 6;
-            this.NumBoxPUBGConverted.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumBoxPUBGConverted.Increment = new decimal(new int[] {
+            this.NumBoxPubgConv.DecimalPlaces = 6;
+            this.NumBoxPubgConv.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumBoxPubgConv.Increment = new decimal(new int[] {
             1,
             0,
             0,
             196608});
-            this.NumBoxPUBGConverted.Location = new System.Drawing.Point(140, 31);
-            this.NumBoxPUBGConverted.Minimum = new decimal(new int[] {
+            this.NumBoxPubgConv.Location = new System.Drawing.Point(140, 31);
+            this.NumBoxPubgConv.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             393216});
-            this.NumBoxPUBGConverted.Name = "NumBoxPUBGConverted";
-            this.NumBoxPUBGConverted.Size = new System.Drawing.Size(131, 23);
-            this.NumBoxPUBGConverted.TabIndex = 3;
-            this.NumBoxPUBGConverted.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NumBoxPUBGConverted.Value = new decimal(new int[] {
+            this.NumBoxPubgConv.Name = "NumBoxPubgConv";
+            this.NumBoxPubgConv.Size = new System.Drawing.Size(131, 23);
+            this.NumBoxPubgConv.TabIndex = 3;
+            this.NumBoxPubgConv.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumBoxPubgConv.Value = new decimal(new int[] {
             2,
             0,
             0,
             131072});
-            this.NumBoxPUBGConverted.ValueChanged += new System.EventHandler(this.NumBoxPUBGConverted_ValueChanged);
+            this.NumBoxPubgConv.ValueChanged += new System.EventHandler(this.NumBoxPubgConv_ValueChanged);
             // 
             // label2
             // 
@@ -358,55 +358,55 @@
             this.label5.Text = "Converted";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // NumBoxPUBGSense
+            // NumBoxPubgSense
             // 
-            this.NumBoxPUBGSense.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumBoxPUBGSense.Location = new System.Drawing.Point(140, 3);
-            this.NumBoxPUBGSense.Maximum = new decimal(new int[] {
+            this.NumBoxPubgSense.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumBoxPubgSense.Location = new System.Drawing.Point(140, 3);
+            this.NumBoxPubgSense.Maximum = new decimal(new int[] {
             999999,
             0,
             0,
             0});
-            this.NumBoxPUBGSense.Minimum = new decimal(new int[] {
+            this.NumBoxPubgSense.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             327680});
-            this.NumBoxPUBGSense.Name = "NumBoxPUBGSense";
-            this.NumBoxPUBGSense.Size = new System.Drawing.Size(131, 23);
-            this.NumBoxPUBGSense.TabIndex = 2;
-            this.NumBoxPUBGSense.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NumBoxPUBGSense.Value = new decimal(new int[] {
+            this.NumBoxPubgSense.Name = "NumBoxPubgSense";
+            this.NumBoxPubgSense.Size = new System.Drawing.Size(131, 23);
+            this.NumBoxPubgSense.TabIndex = 2;
+            this.NumBoxPubgSense.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumBoxPubgSense.Value = new decimal(new int[] {
             50,
             0,
             0,
             0});
-            this.NumBoxPUBGSense.ValueChanged += new System.EventHandler(this.NumBoxPUBGSense_ValueChanged);
+            this.NumBoxPubgSense.ValueChanged += new System.EventHandler(this.NumBoxPubgSense_ValueChanged);
             // 
-            // NumBoxPUBGFOV
+            // NumBoxPubgFov
             // 
-            this.NumBoxPUBGFOV.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NumBoxPUBGFOV.Location = new System.Drawing.Point(140, 59);
-            this.NumBoxPUBGFOV.Maximum = new decimal(new int[] {
+            this.NumBoxPubgFov.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NumBoxPubgFov.Location = new System.Drawing.Point(140, 59);
+            this.NumBoxPubgFov.Maximum = new decimal(new int[] {
             103,
             0,
             0,
             0});
-            this.NumBoxPUBGFOV.Minimum = new decimal(new int[] {
+            this.NumBoxPubgFov.Minimum = new decimal(new int[] {
             80,
             0,
             0,
             0});
-            this.NumBoxPUBGFOV.Name = "NumBoxPUBGFOV";
-            this.NumBoxPUBGFOV.Size = new System.Drawing.Size(131, 23);
-            this.NumBoxPUBGFOV.TabIndex = 5;
-            this.NumBoxPUBGFOV.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.NumBoxPUBGFOV.Value = new decimal(new int[] {
+            this.NumBoxPubgFov.Name = "NumBoxPubgFov";
+            this.NumBoxPubgFov.Size = new System.Drawing.Size(131, 23);
+            this.NumBoxPubgFov.TabIndex = 5;
+            this.NumBoxPubgFov.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.NumBoxPubgFov.Value = new decimal(new int[] {
             103,
             0,
             0,
             0});
-            this.NumBoxPUBGFOV.ValueChanged += new System.EventHandler(this.NumBoxPUBGFOV_ValueChanged);
+            this.NumBoxPubgFov.ValueChanged += new System.EventHandler(this.NumBoxPubgFov_ValueChanged);
             // 
             // groupBox4
             // 
@@ -745,9 +745,9 @@
             this.groupBox3.ResumeLayout(false);
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGConverted)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGSense)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPUBGFOV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgConv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgSense)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NumBoxPubgFov)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel4.PerformLayout();
@@ -780,12 +780,12 @@
         private System.Windows.Forms.NumericUpDown NumBoxOWSense;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.NumericUpDown NumBoxPUBGConverted;
+        private System.Windows.Forms.NumericUpDown NumBoxPubgConv;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.NumericUpDown NumBoxPUBGSense;
+        private System.Windows.Forms.NumericUpDown NumBoxPubgSense;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.NumericUpDown NumBoxPUBGFOV;
+        private System.Windows.Forms.NumericUpDown NumBoxPubgFov;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label7;
