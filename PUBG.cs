@@ -9,32 +9,41 @@ namespace UnifySensitivity {
         // Warning: lots of magic numbers round these parts
         // Get values from cm/360
         internal static decimal ConvFromCm(decimal cm, decimal dpi, decimal fov) {
-            decimal prod = cm * dpi * fov;
+            // 20/9 = 2.22... = 101.0101 * 0.022
+            decimal approx_yaw = (20.0M / 9.0M) * (fov / 80.0M);
+            decimal prod = cm * dpi * approx_yaw;
             if (prod <= 0) {
                 return 0;
             }
-            return 32918.4M / prod;
+            return 914.4M / prod;
         }
         internal static decimal SenseFromCm(decimal cm, decimal dpi, decimal fov) {
-            double prod = (double)(cm * dpi * fov);
-            decimal lval = (decimal)Math.Log(16459200 / prod);
-            return 21.7147M * lval;
+            // PUBG sense is a logarithmic representation of the 'real value'
+            // 0 = 0.002, 100 = 0.2
+            // 100 * ((log10(c) - log10(0.002)) / (log10(0.2) - log10(0.002)))
+            // = 100 * ((log10(c) - log10(0.002)) / 2)
+            double conv = (double)ConvFromCm(cm, dpi, fov);
+            if (conv <= 0) {
+                return 0;
+            }
+            double rval = 100 * ((Math.Log10(conv) - Math.Log10(0.002)) / 2);
+            return (decimal)rval;
         }
         // Get cm/360 from values
         internal static decimal CmFromSense(decimal val, decimal dpi, decimal fov) {
-            decimal prod = dpi * fov;
-            if (prod <= 0) {
-                return 0;
-            }
-            double m = 16459200 * Math.Pow(2.71828, -0.0460518 * (double)val);
-            return (decimal)m / prod;
+            // Just convert to real value first
+            double m = ((double)val / 50.0) + Math.Log10(0.002);
+            decimal prod = (decimal)Math.Pow(10, m);
+            return CmFromConv(prod, dpi, fov);
         }
         internal static decimal CmFromConv(decimal val, decimal dpi, decimal fov) {
-            decimal prod = val * dpi * fov;
+            // 20/9 = 2.22... = 101.0101 * 0.022
+            decimal approx_yaw = (20.0M / 9.0M) * (fov / 80.0M);
+            decimal prod = val * dpi * approx_yaw;
             if (prod <= 0) {
                 return 0;
             }
-            return 32918.4M / prod;
+            return 914.4M / prod;
         }
     }
 }
